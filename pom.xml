@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- 打包方式 -->
+  <packaging>jar</packaging>
+
+  <groupId>com.shizhuang.duapp</groupId>
+  <artifactId>dcheck-admin-webjar</artifactId>
+  <version>1.0.3-SNAPSHOT</version>
+
+  <!-- 构建工具 -->
+  <build>
+    <resources>
+      <resource>
+        <directory>${project.basedir}/dist</directory>
+        <targetPath>META-INF/resources/</targetPath>
+      </resource>
+    </resources>
+  </build>
+
+  <repositories>
+    <repository>
+      <id>poizon-repos</id>
+      <url>http://nexus.poizon.com/nexus/content/groups/public/</url>
+    </repository>
+  </repositories>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <name>Nexus Snapshot Repository</name>
+      <url>http://nexus.poizon.com/nexus/content/repositories/snapshots/</url>
+    </snapshotRepository>
+
+    <repository>
+      <id>releases</id>
+      <name>Nexus Release Repository</name>
+      <url>http://nexus.poizon.com/nexus/content/repositories/releases/</url>
+    </repository>
+  </distributionManagement>
+</project>
